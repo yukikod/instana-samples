@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  openldap:
+    container_name: openldap
+    image: osixia/openldap:latest
+    ports:
+      - "389:389"
+    environment:
+      TZ: Asia/Tokyo
+    env_file: .env
+    restart: always
+    volumes:
+      - ./ldapadd.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/50-ldapadd.ldif
+    command: --copy-service
+    networks:
+      - instana
+
+networks:
+  instana:
+    external: true
+    name: instana

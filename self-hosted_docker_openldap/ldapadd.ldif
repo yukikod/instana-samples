@@ -1,0 +1,29 @@
+## IBM
+#dn: dc=instana,dc=local
+#objectClass: top
+#objectClass: dcObject
+#objectClass: organization
+#o: IBM
+#dc: instana
+
+# group, instana.local
+dn: ou=group,dc=instana,dc=local
+objectClass: organizationalUnit
+ou: group
+
+# people, instana.local
+dn: ou=people,dc=instana,dc=local
+objectClass: organizationalUnit
+ou: people
+
+# admin, people, instana.local
+dn: uid=admin,ou=people,dc=instana,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: admin
+cn: admin
+sn: admin
+mail: admin@instana.local
+userPassword: INSTANA_ADMIN_PASSWORD
