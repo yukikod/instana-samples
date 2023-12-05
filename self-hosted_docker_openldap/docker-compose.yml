@@ -8,6 +8,12 @@ services:
       - "389:389"
     environment:
       TZ: Asia/Tokyo
+      LDAP_ORGANISATION: IBM
+      LDAP_DOMAIN: instana.local
+      LDAP_BASE_DN: dc=instana,dc=local
+      LDAP_ADMIN_PASSWORD: admin
+      LDAP_CONFIG_PASSWORD: config
+      LDAP_TLS: false
     env_file: .env
     restart: always
     volumes:
