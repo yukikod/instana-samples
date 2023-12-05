@@ -26,4 +26,24 @@ uid: admin
 cn: admin
 sn: admin
 mail: admin@instana.local
-userPassword: INSTANA_ADMIN_PASSWORD
+userPassword: {SSHA}iasV40zarDNk1uHBBHKsfh3wj4DcQjhE
+
+# instanaut1, people, instana.local
+dn: uid=instanaut1,ou=people,dc=instana,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: instanaut1
+cn: instanaut1
+sn: instanaut1
+mail: instanaut1@instana.local
+userPassword: {SSHA}j2NdJprA9opORImusfmNW9fJ4PoQPT4I
+
+# instana, group, instana.local
+dn: cn=instana,ou=group,dc=instana,dc=local
+objectClass: top
+objectClass: groupOfNames
+cn: instana
+member: uid=admin,ou=people,dc=instana,dc=local
+member: uid=instanaut1,ou=people,dc=instana,dc=local
