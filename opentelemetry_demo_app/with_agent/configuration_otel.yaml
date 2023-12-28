@@ -1,0 +1,5 @@
+com.instana.plugin.opentelemetry:
+  grpc:
+    enabled: true
+  http:
+    enabled: true

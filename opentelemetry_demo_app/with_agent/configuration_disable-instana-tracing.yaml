@@ -1,0 +1,21 @@
+com.instana.tracing:
+  extra-http-headers:
+    - traceparent
+    - tracestate
+
+com.instana.plugin.javatrace:
+  instrumentation:
+    enabled: false
+  trace-jvms-with-problematic-agents: true
+
+com.instana.plugin.python:
+  autotrace:
+    enabled: false
+
+com.instana.plugin.php:
+  tracing:
+    enabled: false
+
+com.instana.plugin.netcore:
+  tracing:
+    enabled: false
